@@ -5,6 +5,8 @@ body {
     background-color: #fcf4e6;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     justify-content: flex-start;
     box-sizing: border-box;
 }
@@ -29,6 +31,7 @@ body {
 .main-container {
     display: flex;
     flex-direction: row;
+    flex: 1;
     justify-content: space-between;
     align-items: flex-start;
     margin: 50px 200px 0 210px;
@@ -54,7 +57,7 @@ h2 {
     font-size: 20px;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
-    margin: 0;
+    margin: 10px;
 }
 
 p {
@@ -109,22 +112,20 @@ button {
 
 .about {
     text-align: right;
+    margin-right: 40px;
 }
 
 #p-about {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 #about {
-    margin-right: 230px;
+    margin-right: 280px;
 }
-
-/* ====== Dropdown ====== */
 
 .skills {
    display: flex;
    flex-direction: column;
-   padding: 20px;
 }
 
 .skills p {
@@ -185,7 +186,8 @@ button {
 .sidenav {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-right: 40px;
     text-align: right;
 }
 
@@ -251,12 +253,15 @@ button {
   
   .card img {
     border-radius: 5px 5px 0 0;
-    width: 40%;
-    height: 40%;
+    width: auto;
+    height: auto;
+    padding-left: 60px;
+    padding-right: 20px;
+    padding-top: 20px;
   }
 
   .card h3 {
-    margin: 10px 0;
+    margin: 10% 0;
     font-family: 'Montserrat', sans-serif;
     text-decoration: underline;
     font-weight: 600;
@@ -315,12 +320,12 @@ button {
 
 .contact_social_icon {
     font-size: 4.5rem;
-    color: black;
+    color: #92c3c9;
     transition: color 0.3s ease;
 }
 
 .contact_social_icon:hover {
-    color: #92c3c9; 
+    color: #d5e3e4; 
 }
 
 #fill {
@@ -462,12 +467,35 @@ button {
     width: 100%;
 }
     
-    /* On small screens, set height to 'auto' for sidenav and grid */
+/* ====== Media Querie ====== */
+
 @media screen and (max-width: 767px) {
     .sidenav {
         height: auto;
         padding: 15px;
     }
 
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .row.content {height: auto;} 
 }
+
+/* @media (min-width: 1200px) {
+    .main-container {
+      max-width: 1200px;
+      margin-left: 400px;
+    }
+
+    .logo {
+        margin-left: 435px;
+    }
+
+    .sidenav {
+        height: auto;
+        padding: 15px;
+        margin-right: 200px;
+    }
+} */
